@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import UniIcons from '@dcloudio/uni-ui/lib/uni-icons/uni-icons.vue'
-Vue.component('uni-icons', UniIcons)
+
 
 
 //导入网络请求的包为$http,然后把它挂载到uni这个顶级对象上作为一个自定义属性
