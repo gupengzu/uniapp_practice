@@ -1,8 +1,8 @@
 <template>
 	<view>
 		<!-- 搜索组件 -->
-		<view class="saerch-box">
-		<my-search @click="gotoSearch"></my-search>
+		<view class="search-box">
+		<mysearch @click="gotoSearch"></mysearch>
 		</view>
 		<!-- 轮播图 -->
 		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" :circular="true">
@@ -58,7 +58,10 @@
 </template>
 
 <script>
+	import mysearch from '@/components/my-search/my-search.vue' 
+	import badgeMix from '@/mininx/tabvar-badge.js'
 	export default {
+		mixins:[badgeMix],
 		data() {
 			return {
 				//轮播图数据列表
@@ -118,7 +121,10 @@
 					url:'/subpkg/search/search'
 				})
 			}
-		}
+		},
+		components: {
+			mysearch
+		},
 	}
 </script>
 

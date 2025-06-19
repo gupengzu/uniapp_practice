@@ -1,7 +1,9 @@
 {
 	"pages": [{
             "path" : "pages/home/home",
-            "style" : {}
+            "style" : {
+				"navigationBarTitleText": "首页"
+			}
         }
         ,{
             "path" : "pages/cart/cart",

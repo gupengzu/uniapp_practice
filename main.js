@@ -1,13 +1,14 @@
-import Vue from 'vue'
-import App from './App'
-
-
 
 //导入网络请求的包为$http,然后把它挂载到uni这个顶级对象上作为一个自定义属性
 import{$http}from "@escook/request-miniprogram"
 uni.$http=$http
 //设置请求的根路径,这样每次写网络请求时就不要在前面带着https://api-hmugo-web.itheima.net
 $http.baseUrl='https://api-hmugo-web.itheima.net'
+
+
+import Vue from 'vue'
+import App from './App'
+import store from '@/store/store.js'
 
 
 //请求拦截器
@@ -35,6 +36,7 @@ Vue.config.productionTip = false
 App.mpType = 'app'
 
 const app = new Vue({
-	...App
+	...App,
+	store
 })
 app.$mount()
